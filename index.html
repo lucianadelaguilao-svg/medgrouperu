@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Group Peru | Repuestos Dentales Profesionales</title>
+    <style>
+        /* ESTILOS GENERALES (PALETA MEDICA) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f3f5; 
+            color: #333;
+        }
+        
+        /* ENCABEZADO MODIFICADO (LOGO GRANDE Y CENTRADO) */
+        header {
+            background-color: white; 
+            border-bottom: 2px solid #005f73; 
+            padding: 30px 50px; 
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-img {
+            max-height: 120px; 
+            width: auto;
+        }
+        
+        /* BANNER PRINCIPAL */
+        .hero {
+            background-color: #e3f2fd; 
+            color: #0d47a1; 
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h2 { font-size: 36px; margin-bottom: 10px; color: #0d47a1; }
+        .hero p { font-size: 18px; max-width: 600px; margin: 0 auto; color: #555; }
+
+        /* CATÁLOGO DE PRODUCTOS */
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .producto {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .producto:hover {
+            transform: translateY(-5px); 
+        }
+        .producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-style: italic;
+        }
+        .producto h3 { color: #005f73; font-size: 20px; margin-bottom: 10px;}
+        .producto p { color: #666; font-size: 14px; margin-bottom: 20px;}
+        
+        /* BOTÓN WHATSAPP */
+        .btn-comprar {
+            display: inline-block;
+            background-color: #1ebea5; 
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .btn-comprar:hover { background-color: #16a085; }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Med Group Peru - Soluciones Dentales Profesionales" class="logo-img">
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Especialistas en Repuestos para Unidades Dentales</h2>
+        <p>Mantén tu clínica funcionando al 100%. Proveemos válvulas, holders y accesorios de succión de la más alta calidad.</p>
+    </div>
+
+    <div class="catalogo">
+        <div class="producto">
+            <img src="valvulas.jpg" alt="Válvulas Automáticas">
+            <h3>Válvulas Automáticas</h3>
+            <p>Control preciso del flujo de aire y agua para el funcionamiento óptimo de tus piezas de mano.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20las%20Válvulas%20Automáticas" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="holders.jpg" alt="Holders">
+            <h3>Holders (Soportes)</h3>
+            <p>Soportes ergonómicos y resistentes para piezas de mano, jeringas triples y suctores.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20los%20Holders" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="retractoras.jpg" alt="Válvulas Retractoras">
+            <h3>Válvulas Retractoras</h3>
+            <p>Sistemas anti-retorno de alta calidad para evitar la contaminación cruzada en la unidad.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20las%20Válvulas%20Retractoras" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="mangueras.jpg" alt="Mangueras">
+            <h3>Mangueras Dentales</h3>
+            <p>Mangueras lisas y corrugadas de silicona médica, ultra flexibles y fáciles de desinfectar.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20las%20Mangueras" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="puntas.jpg" alt="Puntas de Succión">
+            <h3>Puntas de Succión</h3>
+            <p>Cánulas eyectoras y puntas quirúrgicas con excelente capacidad de aspiración y confort para el paciente.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20las%20Puntas%20de%20Succión" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Med Group Peru. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
