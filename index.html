@@ -78,18 +78,25 @@
         .producto h3 { color: #005f73; font-size: 20px; margin-bottom: 10px;}
         .producto p { color: #666; font-size: 14px; margin-bottom: 20px;}
         
-        /* BOTÓN WHATSAPP */
+        /* BOTÓN PERSONALIZADO CON LOS COLORES DE MED GROUP */
         .btn-comprar {
             display: inline-block;
-            background-color: #1ebea5; 
+            background-color: #005f73; /* El azul profesional de tu logo */
             color: white;
-            padding: 12px 24px;
+            padding: 12px 28px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px; /* Bordes más redondeados para un look moderno */
             font-weight: bold;
             font-size: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: 2px solid #005f73;
         }
-        .btn-comprar:hover { background-color: #16a085; }
+
+        .btn-comprar:hover {
+            background-color: #0d47a1; /* Un azul un poco más vibrante al pasar el mouse */
+            border-color: #0d47a1;
+            transform: scale(1.05); /* El botón crece un poquito al tocarlo */
+        }
 
         /* PIE DE PÁGINA */
         footer {
