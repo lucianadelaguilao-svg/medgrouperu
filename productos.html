@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Med Group Peru | Inicio</title>
+    <title>Nosotros | Med Group Peru</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -37,26 +37,18 @@
         .menu-links a { margin: 0 20px; text-decoration: none; color: #444; font-weight: 500; font-size: 1.1rem; transition: color 0.3s; }
         .menu-links a:hover { color: var(--azul-med); }
 
-        /* BANNER */
-        header {
-            background: linear-gradient(rgba(0,142,180,0.85), rgba(0,142,180,0.85)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070');
-            background-size: cover; background-position: center; color: white; text-align: center; padding: 130px 20px; 
+        /* SECCIÓN ACERCA DE NOSOTROS */
+        .acerca-de { max-width: 1000px; margin: 80px auto; padding: 0 5%; text-align: center; min-height: 50vh;}
+        .acerca-de h2 { color: var(--azul-oscuro); font-size: 2.5rem; margin-bottom: 30px; font-weight: 600; }
+        .acerca-de-quote {
+            background-color: var(--azul-oscuro); color: white; padding: 40px; border-radius: 15px;
+            font-size: 1.3rem; font-style: italic; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-left: 8px solid var(--azul-med);
         }
-        header h1 { font-size: 3.2rem; margin-bottom: 25px; font-weight: 600; }
-        header p { font-size: 1.4rem; max-width: 850px; margin: 0 auto 50px; opacity: 0.95; line-height: 1.6; }
-
-        .btn-comprar {
-            display: inline-block; background-color: white; color: var(--azul-med); padding: 16px 35px;
-            text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 17px; transition: all 0.3s ease;
+        .acerca-de-text {
+            color: #555; font-size: 1.15rem; line-height: 1.8; text-align: justify;
+            background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        .btn-comprar:hover { transform: scale(1.04); }
-
-        /* CONFIANZA */
-        .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 60px 5%; background: white; }
-        .feature-item { flex: 1; min-width: 280px; max-width: 380px; text-align: center; padding: 30px; border-radius: 12px; background-color: #f0f8ff; box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
-        .feature-item span { font-size: 50px; display: block; margin-bottom: 20px; }
-        .feature-item h4 { color: var(--azul-med); margin: 15px 0; font-size: 1.3rem; }
-        .feature-item p { color: #555; font-size: 16px; line-height: 1.6; }
 
         /* WHATSAPP Y FOOTER */
         .whatsapp-float {
@@ -70,7 +62,6 @@
 
         @media (max-width: 768px) {
             .menu-links { display: none; } 
-            header h1 { font-size: 2.4rem; }
             .nav-brand img { height: 65px; margin-right: 15px;} 
             .nav-brand span { font-size: 1.3rem; }
         }
@@ -84,34 +75,22 @@
             <span>MED GROUP PERU</span>
         </a>
         <div class="menu-links">
-            <a href="index.html" style="color: var(--azul-med); font-weight: 600;">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html" style="color: var(--azul-med); font-weight: 600;">Nosotros</a>
             <a href="productos.html">Productos</a>
             <a href="#contacto">Contacto</a>
         </div>
     </nav>
 
-    <header>
-        <h1>Repuestos Dentales de Alta Precisión</h1>
-        <p>Mantén tu clínica funcionando al 100%. Proveemos válvulas, soportes y accesorios de la más alta calidad en todo el Perú.</p>
-        <a href="productos.html" class="btn-comprar">Ver Catálogo</a>
-    </header>
-
-    <div class="features">
-        <div class="feature-item">
-            <span>🚚</span>
-            <h4>Envíos a todo el Perú</h4>
-            <p>Llegamos a todas las provincias con rapidez y seguridad.</p>
+    <div class="acerca-de">
+        <h2>Nuestra Historia</h2>
+        
+        <div class="acerca-de-quote">
+            "... Con más de 20 años en el negocio somos una de las empresas líder en la producción de repuestos dentales ..."
         </div>
-        <div class="feature-item">
-            <span>🛡️</span>
-            <h4>Calidad Garantizada</h4>
-            <p>Repuestos originales y compatibles con las mejores marcas.</p>
-        </div>
-        <div class="feature-item">
-            <span>👨‍🔧</span>
-            <h4>Asesoría Técnica</h4>
-            <p>Expertos listos para ayudarte a elegir el repuesto correcto.</p>
+        
+        <div class="acerca-de-text">
+            Somos una empresa que se dedica al diseño, fabricación, comercialización y servicio post-venta de accesorios y partes para la elaboración de equipos dentales, camas clínicas, sillones ginecológicos y equipo médico en general. La investigación y desarrollo conjuntamente con el feedback de nuestros clientes y el uso adecuado de recursos nos están acercando cada vez más a liderar nuestro mercado y ser una de las empresas emprendedoras más grandes del Perú que buscan desarrollar la industria nacional.
         </div>
     </div>
 
