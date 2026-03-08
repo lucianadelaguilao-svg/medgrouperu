@@ -4,126 +4,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Med Group Peru | Repuestos Dentales Profesionales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        /* ESTILOS GENERALES (PALETA MEDICA) */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f3f5; 
-            color: #333;
+        /* CONFIGURACIÓN GLOBAL */
+        :root {
+            --azul-oscuro: #002d36;
+            --azul-med: #005f73;
+            --azul-hover: #0a9396;
+            --blanco: #ffffff;
+            --gris-claro: #f8f9fa;
         }
-        
-        /* ENCABEZADO MODIFICADO (LOGO GRANDE Y CENTRADO) */
-        header {
-            background-color: white; 
-            border-bottom: 2px solid #005f73; 
-            padding: 30px 50px; 
-            display: flex;
-            justify-content: center; 
-            align-items: center;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo-img {
-            max-height: 120px; 
-            width: auto;
-        }
-        
-        /* BANNER PRINCIPAL */
-        .hero {
-            background-color: #e3f2fd; 
-            color: #0d47a1; 
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .hero h2 { font-size: 36px; margin-bottom: 10px; color: #0d47a1; }
-        .hero p { font-size: 18px; max-width: 600px; margin: 0 auto; color: #555; }
 
-        /* CATÁLOGO DE PRODUCTOS */
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #333;
+            background-color: var(--gris-claro);
+            scroll-behavior: smooth;
+        }
+
+        /* MENÚ DE NAVEGACIÓN STICKY */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--blanco);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 2000;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-brand img {
+            height: 45px;
+            margin-right: 12px;
+        }
+
+        .nav-brand span {
+            font-weight: 600;
+            color: var(--azul-med);
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .menu-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #444;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .menu-links a:hover {
+            color: var(--azul-med);
+        }
+
+        /* BANNER PRINCIPAL (HERO) */
+        header {
+            background: linear-gradient(rgba(0,45,54,0.85), rgba(0,45,54,0.85)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 600; }
+        header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+
+        /* SECCIÓN DE CONFIANZA */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 5%;
+            background: white;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-item span { font-size: 40px; display: block; margin-bottom: 10px; }
+        .feature-item h4 { color: var(--azul-med); margin: 10px 0; }
+
+        /* CATÁLOGO */
         .catalogo {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            padding: 50px;
+            padding: 60px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .producto {
             background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
         }
+
         .producto:hover {
-            transform: translateY(-5px); 
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--azul-med);
         }
 
         .producto img {
-    width: 100%;
-    height: 200px; /* Esto obliga a todas las fotos a medir lo mismo */
-    object-fit: contain; /* Esto evita que las fotos se estiren o se vean raras */
-    margin-bottom: 15px;
-            border-radius: 5px;
-            background-color: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #aaa;
-            font-style: italic;
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            background-color: #fff;
         }
-        .producto h3 { color: #005f73; font-size: 20px; margin-bottom: 10px;}
-        .producto p { color: #666; font-size: 14px; margin-bottom: 20px;}
-        
-        /* BOTÓN PERSONALIZADO CON LOS COLORES DE MED GROUP */
+
+        .producto h3 { color: var(--azul-oscuro); font-size: 18px; margin: 15px 0 10px; }
+        .producto p { color: #777; font-size: 14px; margin-bottom: 20px; min-height: 40px;}
+
+        /* BOTONES */
         .btn-comprar {
             display: inline-block;
-            background-color: #005f73; /* El azul profesional de tu logo */
+            background-color: var(--azul-med);
             color: white;
-            padding: 12px 28px;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 50px; /* Bordes más redondeados para un look moderno */
-            font-weight: bold;
-            font-size: 15px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            border: 2px solid #005f73;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--azul-med);
         }
 
         .btn-comprar:hover {
-            background-color: #0d47a1; /* Un azul un poco más vibrante al pasar el mouse */
-            border-color: #0d47a1;
-            transform: scale(1.05); /* El botón crece un poquito al tocarlo */
+            background-color: var(--azul-oscuro);
+            border-color: var(--azul-oscuro);
+            transform: scale(1.02);
         }
 
-        /* PIE DE PÁGINA */
-        footer {
-            background-color: #222;
-            color: white;
+        /* BOTÓN FLOTANTE */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--azul-oscuro);
+            color: white;
+            padding: 60px 5% 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-links { display: none; } /* En móviles ocultamos enlaces simples por ahora */
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="Med Group Peru - Soluciones Dentales Profesionales" class="logo-img">
+    <nav>
+        <a href="#" class="nav-brand">
+            <img src="logo.jpg" alt="Logo Med Group">
+            <span>MED GROUP PERU</span>
+        </a>
+        <div class="menu-links">
+            <a href="#">Inicio</a>
+            <a href="#catalogo">Productos</a>
+            <a href="#contacto">Contacto</a>
         </div>
+    </nav>
+
+    <header>
+        <h1>Repuestos Dentales de Alta Precisión</h1>
+        <p>Mantén tu clínica funcionando al 100%. Proveemos válvulas, soportes y accesorios de la más alta calidad en todo el Perú.</p>
+        <a href="#catalogo" class="btn-comprar" style="background: white; color: var(--azul-med); border: none;">Ver Catálogo</a>
     </header>
 
-    <div class="hero">
-        <h2>Especialistas en Repuestos para Unidades Dentales</h2>
-        <p>Mantén tu clínica funcionando al 100%. Proveemos válvulas, holders y accesorios de succión de la más alta calidad.</p>
+    <div class="features">
+        <div class="feature-item">
+            <span>🚚</span>
+            <h4>Envíos a todo el Perú</h4>
+            <p>Llegamos a todas las provincias con rapidez y seguridad.</p>
+        </div>
+        <div class="feature-item">
+            <span>🛡️</span>
+            <h4>Calidad Garantizada</h4>
+            <p>Repuestos originales y compatibles con las mejores marcas.</p>
+        </div>
+        <div class="feature-item">
+            <span>👨‍🔧</span>
+            <h4>Asesoría Técnica</h4>
+            <p>Expertos listos para ayudarte a elegir el repuesto correcto.</p>
+        </div>
     </div>
 
- <div class="catalogo">
+    <div id="catalogo" class="catalogo">
         <div class="producto">
             <img src="soporteblanco.jpg" alt="Soporte Solo">
             <h3>Soporte Solo</h3>
@@ -142,7 +251,6 @@
             <p>Válvula retractora para sistema de agua de piezas de mano.</p>
             <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Retractora" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
-
         <div class="producto">
             <img src="aros.jpg" alt="Aros en 4 medidas">
             <h3>Aros en 4 medidas</h3>
@@ -161,7 +269,6 @@
             <p>Filtro canastilla para recolección de sólidos.</p>
             <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Canastilla%20para%20Salivadera" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
-
         <div class="producto">
             <img src="puntadesuccionconchupon.jpg" alt="Punta de Succión con Chupón">
             <h3>Punta de Succión con Chupón</h3>
@@ -180,7 +287,6 @@
             <p>Conector estándar de 2 entradas para alta velocidad.</p>
             <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Terminal%20Borden" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
-
         <div class="producto">
             <img src="miple.jpg" alt="Miple">
             <h3>Miple</h3>
@@ -199,7 +305,6 @@
             <p>Control neumático de piso para unidades dentales.</p>
             <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20los%20Pedales" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
-
         <div class="producto">
             <img src="tapadebotella.jpg" alt="Tapa de Botella">
             <h3>Tapa de Botella</h3>
@@ -218,10 +323,9 @@
             <p>Módulo de control de conexiones para unidad.</p>
             <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Caja%20Auxiliar%20de%20Control" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
-
         <div class="producto">
-            <img src="empaquetaduratapadebotella.jpg" alt="Empaquetadura para Tapa de Botella">
-            <h3>Empaquetadura para Tapa de Botella</h3>
+            <img src="empaquetaduratapadebotella.jpg" alt="Empaquetadura">
+            <h3>Empaquetadura de Botella</h3>
             <p>Sello hermético de repuesto para botellas dentales.</p>
             <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Empaquetadura" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
@@ -237,7 +341,6 @@
             <p>Control ergonómico avanzado para el sillón dental.</p>
             <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Pedal%20Multifunción" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
-
         <div class="producto">
             <img src="kitdesuccion.jpg" alt="Kit de Succión">
             <h3>Kit de Succión</h3>
@@ -248,51 +351,4 @@
             <img src="teyuniondeplastico.jpg" alt="T y Unión de Plástico">
             <h3>T y Unión de Plástico</h3>
             <p>Conectores rápidos para distribución interna.</p>
-            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20T%20y%20Unión%20de%20Plástico" target="_blank" class="btn-comprar">Cotizar Precio</a>
-        </div>
-        <div class="producto">
-            <img src="desaguerecto.jpg" alt="Desagüe Recto">
-            <h3>Desagüe Recto</h3>
-            <p>Tubo conector para sistema de drenaje.</p>
-            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Desagüe%20Recto" target="_blank" class="btn-comprar">Cotizar Precio</a>
-    </div>
-        </div>
-    </div>
-        </div>
-    </div>
-
-<footer style="background-color: #002d36; color: white; text-align: center; padding: 20px; margin-top: 50px;">
-        <p><strong>TELF. 966303747 - 998839879</strong></p>
-        <p>CALLE CAILLOMA 455 - CENTRO DE LIMA</p>
-        <p>&copy; 2024 Med Group Peru - Todos los derechos reservados</p>
-    </footer>
-<footer style="background-color: #002d36; color: white; padding: 40px 20px; margin-top: 50px; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
-            
-            <div style="flex: 1; min-width: 300px; margin-bottom: 30px;">
-                <h3 style="color: #ffffff; margin-bottom: 20px;">CONTACTO</h3>
-                <p style="font-size: 18px; margin: 10px 0;"><strong>📞 966 303 747 / 998 839 879</strong></p>
-                <p style="font-size: 16px; margin: 10px 0;">📍 Calle Cailloma 455 - Centro de Lima, Perú</p>
-                <p style="font-size: 14px; opacity: 0.8; margin-top: 20px;">Atención de Lunes a Sábado</p>
-            </div>
-
-            <<div style="flex: 1; min-width: 300px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.88878523315!2d-77.0371661!3d-12.0436111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c50559f07d%3A0xc68292f75971488c!2sCa.%20Cailloma%20455%2C%20Lima%2015001%2C%20Peru!5e0!3m2!1ses!2sde!4v1711200000000!5m2!1ses!2sde" 
-        width="100%" 
-        height="250" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
-        </div>
-
-        <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; font-size: 13px; opacity: 0.6;">
-            &copy; 2024 Med Group Peru - Especialistas en Repuestos Dentales. Todos los derechos reservados.
-        </div>
-    </footer>
-
-</body>
-</html>
+            <a href="
