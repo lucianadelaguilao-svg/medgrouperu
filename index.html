@@ -1,158 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Group Peru | Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --azul-oscuro: #002d36;
+            --azul-med: #008eb4; 
+            --azul-hover: #00b0dc; 
+            --blanco: #ffffff;
+            --gris-claro: #f8f9fa;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #333;
+            background-color: var(--gris-claro);
+            scroll-behavior: smooth;
+        }
+
+        /* MENÚ */
+        nav {
+            position: sticky; top: 0; background: var(--blanco); display: flex;
+            justify-content: space-between; align-items: center; padding: 20px 5%; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); z-index: 2000;
+        }
+        .nav-brand { display: flex; align-items: center; text-decoration: none; }
+        .nav-brand img { height: 90px; margin-right: 20px; }
+        .nav-brand span { font-weight: 600; color: var(--azul-med); font-size: 1.8rem; letter-spacing: 0.8px; }
+        
+        .menu-links a { margin: 0 20px; text-decoration: none; color: #444; font-weight: 500; font-size: 1.1rem; transition: color 0.3s; }
+        .menu-links a:hover { color: var(--azul-med); }
+
+        /* BANNER */
+        header {
+            background: linear-gradient(rgba(0,142,180,0.85), rgba(0,142,180,0.85)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070');
+            background-size: cover; background-position: center; color: white; text-align: center; padding: 130px 20px; 
+        }
+        header h1 { font-size: 3.2rem; margin-bottom: 25px; font-weight: 600; }
+        header p { font-size: 1.4rem; max-width: 850px; margin: 0 auto 50px; opacity: 0.95; line-height: 1.6; }
+
+        .btn-comprar {
+            display: inline-block; background-color: white; color: var(--azul-med); padding: 16px 35px;
+            text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 17px; transition: all 0.3s ease;
+        }
+        .btn-comprar:hover { transform: scale(1.04); }
+
+        /* CONFIANZA */
+        .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 60px 5%; background: white; }
+        .feature-item { flex: 1; min-width: 280px; max-width: 380px; text-align: center; padding: 30px; border-radius: 12px; background-color: #f0f8ff; box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
+        .feature-item span { font-size: 50px; display: block; margin-bottom: 20px; }
+        .feature-item h4 { color: var(--azul-med); margin: 15px 0; font-size: 1.3rem; }
+        .feature-item p { color: #555; font-size: 16px; line-height: 1.6; }
+
+        /* WHATSAPP Y FOOTER */
+        .whatsapp-float {
+            position: fixed; width: 70px; height: 70px; bottom: 45px; right: 45px; background-color: #25d366; color: #FFF;
+            border-radius: 50px; text-align: center; font-size: 38px; box-shadow: 3px 5px 18px rgba(0,0,0,0.35); z-index: 3000;
+            display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1) translateY(-8px); }
+        
+        footer { background-color: var(--azul-oscuro); color: white; padding: 80px 5% 40px; margin-top: 80px; }
+
+        @media (max-width: 768px) {
+            .menu-links { display: none; } 
+            header h1 { font-size: 2.4rem; }
+            .nav-brand img { height: 65px; margin-right: 15px;} 
+            .nav-brand span { font-size: 1.3rem; }
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="es"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Med Group Peru | Inicio&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--azul-oscuro: #002d36;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--azul-med: #008eb4;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--azul-hover: #00b0dc;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--blanco: #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--gris-claro: #f8f9fa;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Poppins', sans-serif;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #333;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--gris-claro);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>scroll-behavior: smooth;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* MENÚ */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>nav {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: sticky; top: 0; background: var(--blanco); display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: space-between; align-items: center; padding: 20px 5%;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0,0,0,0.08); z-index: 2000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-brand { display: flex; align-items: center; text-decoration: none; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-brand img { height: 90px; margin-right: 20px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-brand span { font-weight: 600; color: var(--azul-med); font-size: 1.8rem; letter-spacing: 0.8px; }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.menu-links a { margin: 0 20px; text-decoration: none; color: #444; font-weight: 500; font-size: 1.1rem; transition: color 0.3s; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.menu-links a:hover { color: var(--azul-med); }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* BANNER */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(rgba(0,142,180,0.85), rgba(0,142,180,0.85)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&amp;w=2070');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-size: cover; background-position: center; color: white; text-align: center; padding: 130px 20px;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header h1 { font-size: 3.2rem; margin-bottom: 25px; font-weight: 600; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header p { font-size: 1.4rem; max-width: 850px; margin: 0 auto 50px; opacity: 0.95; line-height: 1.6; }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-comprar {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block; background-color: white; color: var(--azul-med); padding: 16px 35px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 17px; transition: all 0.3s ease;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn-comprar:hover { transform: scale(1.04); }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* CONFIANZA */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.features { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 60px 5%; background: white; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feature-item { flex: 1; min-width: 280px; max-width: 380px; text-align: center; padding: 30px; border-radius: 12px; background-color: #f0f8ff; box-shadow: 0 4px 10px rgba(0,0,0,0.04); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feature-item span { font-size: 50px; display: block; margin-bottom: 20px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feature-item h4 { color: var(--azul-med); margin: 15px 0; font-size: 1.3rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feature-item p { color: #555; font-size: 16px; line-height: 1.6; }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* WHATSAPP Y FOOTER */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.whatsapp-float {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed; width: 70px; height: 70px; bottom: 45px; right: 45px; background-color: #25d366; color: #FFF;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 50px; text-align: center; font-size: 38px; box-shadow: 3px 5px 18px rgba(0,0,0,0.35); z-index: 3000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.whatsapp-float:hover { transform: scale(1.1) translateY(-8px); }</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>footer { background-color: var(--azul-oscuro); color: white; padding: 80px 5% 40px; margin-top: 80px; }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.menu-links { display: none; }<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>header h1 { font-size: 2.4rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.nav-brand img { height: 65px; margin-right: 15px;}<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.nav-brand span { font-size: 1.3rem; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;nav&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="index.html" class="nav-brand"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;img src="logo.jpg" alt="Logo Med Group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span&gt;MED GROUP PERU&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="menu-links"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="index.html" style="color: var(--azul-med); font-weight: 600;"&gt;Inicio&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="nosotros.html"&gt;Nosotros&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="productos.html"&gt;Productos&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Repuestos Dentales de Alta Precisión&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Mantén tu clínica funcionando al 100%. Proveemos válvulas, soportes y accesorios de la más alta calidad en todo el Perú.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a href="productos.html" class="btn-comprar"&gt;Ver Catálogo&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="features"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="feature-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span&gt;🚚&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Envíos a todo el Perú&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Llegamos a todas las provincias con rapidez y seguridad.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="feature-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span&gt;🛡️&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Calidad Garantizada&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Repuestos originales y compatibles con las mejores marcas.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="feature-item"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span&gt;👨‍🔧&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h4&gt;Asesoría Técnica&lt;/h4&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Expertos listos para ayudarte a elegir el repuesto correcto.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;footer id="contacto"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div style="flex: 1; min-width: 300px; margin-bottom: 45px; text-align: left;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3 style="color: #ffffff; margin-bottom: 30px; font-size: 1.7rem; font-weight: 600;"&gt;MED GROUP PERU&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p style="font-size: 19px; margin: 15px 0;"&gt;&lt;strong&gt;📞 966 303 747 / 998 839 879&lt;/strong&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p style="font-size: 17px; margin: 15px 0;"&gt;📍 Calle Cailloma 455 - Centro de Lima, Perú&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p style="font-size: 16px; opacity: 0.85; margin-top: 30px;"&gt;Atención de Lunes a Sábado&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div style="flex: 1; min-width: 320px; border-radius: 18px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.4); background: white;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9538318881267!2d-77.0371696845258!3d-12.046755991466847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c9e5300001%3A0x6b2b7b5c5e8b1b1!2sCa.%20Cailloma%20455%2C%20Lima%2015001%2C%20Peru!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"&gt;&lt;/iframe&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 60px; padding-top: 30px; font-size: 15px; opacity: 0.75; text-align: center;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>© 2026 Med Group Peru - Especialistas en Repuestos Dentales.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a href="https://wa.me/51966303747" class="whatsapp-float" target="_blank"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;svg viewBox="0 0 32 32" style="width: 40px; height: 40px; fill: white;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.476 2.016 7.787l-2.016 7.353 7.521-1.972c2.203 1.157 4.711 1.832 7.379 1.832 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.273c-2.356 0-4.564-0.627-6.476-1.722l-0.464-0.267-4.48 1.175 1.203-4.381-0.293-0.467c-1.192-1.899-1.888-4.144-1.888-6.551 0-7.32 5.952-13.273 13.273-13.273s13.273 5.953 13.273 13.273c0 7.321-5.952 13.273-13.273 13.273zM22.387 18.84c-0.349-0.176-2.071-1.021-2.392-1.139s-0.555-0.176-0.787 0.176c-0.232 0.352-0.893 1.139-1.096 1.373s-0.405 0.264-0.755 0.088c-0.349-0.176-1.475-0.544-2.811-1.736-1.037-0.925-1.739-2.067-1.944-2.42c-0.203-0.352-0.021-0.541 0.155-0.717 0.157-0.157 0.352-0.408 0.528-0.613s0.232-0.352 0.349-0.587c0.117-0.235 0.059-0.44-0.029-0.616s-0.787-1.896-1.077-2.592c-0.283-0.677-0.571-0.584-0.787-0.595-0.203-0.011-0.435-0.013-0.667-0.013s-0.608 0.088-0.925 0.437c-0.317 0.349-1.211 1.184-1.211 2.883s1.235 3.339 1.405 3.573c0.171 0.235 2.429 3.712 5.885 5.203 0.821 0.355 1.464 0.565 1.963 0.725 0.824 0.261 1.576 0.224 2.168 0.136 0.661-0.099 2.071-0.845 2.363-1.661s0.291-1.517 0.203-1.661c-0.088-0.141-0.323-0.224-0.672-0.403z"/&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="logo.jpg" alt="Logo Med Group">
+            <span>MED GROUP PERU</span>
+        </a>
+        <div class="menu-links">
+            <a href="index.html" style="color: var(--azul-med); font-weight: 600;">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="productos.html">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Repuestos Dentales de Alta Precisión</h1>
+        <p>Mantén tu clínica funcionando al 100%. Proveemos válvulas, soportes y accesorios de la más alta calidad en todo el Perú.</p>
+        <a href="productos.html" class="btn-comprar">Ver Catálogo</a>
+    </header>
+
+    <div class="features">
+        <div class="feature-item">
+            <span>🚚</span>
+            <h4>Envíos a todo el Perú</h4>
+            <p>Llegamos a todas las provincias con rapidez y seguridad.</p>
+        </div>
+        <div class="feature-item">
+            <span>🛡️</span>
+            <h4>Calidad Garantizada</h4>
+            <p>Repuestos originales y compatibles con las mejores marcas.</p>
+        </div>
+        <div class="feature-item">
+            <span>👨‍🔧</span>
+            <h4>Asesoría Técnica</h4>
+            <p>Expertos listos para ayudarte a elegir el repuesto correcto.</p>
+        </div>
+    </div>
+
+    <footer id="contacto">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
+            <div style="flex: 1; min-width: 300px; margin-bottom: 45px; text-align: left;">
+                <h3 style="color: #ffffff; margin-bottom: 30px; font-size: 1.7rem; font-weight: 600;">MED GROUP PERU</h3>
+                <p style="font-size: 19px; margin: 15px 0;"><strong>📞 966 303 747 / 998 839 879</strong></p>
+                <p style="font-size: 17px; margin: 15px 0;">📍 Calle Cailloma 455 - Centro de Lima, Perú</p>
+                <p style="font-size: 16px; opacity: 0.85; margin-top: 30px;">Atención de Lunes a Sábado</p>
+            </div>
+            <div style="flex: 1; min-width: 320px; border-radius: 18px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.4); background: white;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9538318881267!2d-77.0371696845258!3d-12.046755991466847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c9e5300001%3A0x6b2b7b5c5e8b1b1!2sCa.%20Cailloma%20455%2C%20Lima%2015001%2C%20Peru!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 60px; padding-top: 30px; font-size: 15px; opacity: 0.75; text-align: center;">
+            © 2024 Med Group Peru - Especialistas en Repuestos Dentales.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51966303747" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; fill: white;">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.476 2.016 7.787l-2.016 7.353 7.521-1.972c2.203 1.157 4.711 1.832 7.379 1.832 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.273c-2.356 0-4.564-0.627-6.476-1.722l-0.464-0.267-4.48 1.175 1.203-4.381-0.293-0.467c-1.192-1.899-1.888-4.144-1.888-6.551 0-7.32 5.952-13.273 13.273-13.273s13.273 5.953 13.273 13.273c0 7.321-5.952 13.273-13.273 13.273zM22.387 18.84c-0.349-0.176-2.071-1.021-2.392-1.139s-0.555-0.176-0.787 0.176c-0.232 0.352-0.893 1.139-1.096 1.373s-0.405 0.264-0.755 0.088c-0.349-0.176-1.475-0.544-2.811-1.736-1.037-0.925-1.739-2.067-1.944-2.42c-0.203-0.352-0.021-0.541 0.155-0.717 0.157-0.157 0.352-0.408 0.528-0.613s0.232-0.352 0.349-0.587c0.117-0.235 0.059-0.44-0.029-0.616s-0.787-1.896-1.077-2.592c-0.283-0.677-0.571-0.584-0.787-0.595-0.203-0.011-0.435-0.013-0.667-0.013s-0.608 0.088-0.925 0.437c-0.317 0.349-1.211 1.184-1.211 2.883s1.235 3.339 1.405 3.573c0.171 0.235 2.429 3.712 5.885 5.203 0.821 0.355 1.464 0.565 1.963 0.725 0.824 0.261 1.576 0.224 2.168 0.136 0.661-0.099 2.071-0.845 2.363-1.661s0.291-1.517 0.203-1.661c-0.088-0.141-0.323-0.224-0.672-0.403z"/>
+        </svg>
+    </a>
 </body>
 </html>
