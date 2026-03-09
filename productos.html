@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros | Med Group Peru</title>
+    <title>Productos | Med Group Peru</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
+        /* CONFIGURACIÓN GLOBAL */
         :root {
             --azul-oscuro: #002d36;
             --azul-med: #008eb4; 
@@ -24,46 +25,171 @@
             scroll-behavior: smooth;
         }
 
-        /* MENÚ */
+        /* MENÚ DE NAVEGACIÓN STICKY */
         nav {
-            position: sticky; top: 0; background: var(--blanco); display: flex;
-            justify-content: space-between; align-items: center; padding: 20px 5%; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08); z-index: 2000;
-        }
-        .nav-brand { display: flex; align-items: center; text-decoration: none; }
-        .nav-brand img { height: 90px; margin-right: 20px; }
-        .nav-brand span { font-weight: 600; color: var(--azul-med); font-size: 1.8rem; letter-spacing: 0.8px; }
-        
-        .menu-links a { margin: 0 20px; text-decoration: none; color: #444; font-weight: 500; font-size: 1.1rem; transition: color 0.3s; }
-        .menu-links a:hover { color: var(--azul-med); }
-
-        /* SECCIÓN ACERCA DE NOSOTROS */
-        .acerca-de { max-width: 1000px; margin: 80px auto; padding: 0 5%; text-align: center; min-height: 50vh;}
-        .acerca-de h2 { color: var(--azul-oscuro); font-size: 2.5rem; margin-bottom: 30px; font-weight: 600; }
-        .acerca-de-quote {
-            background-color: var(--azul-oscuro); color: white; padding: 40px; border-radius: 15px;
-            font-size: 1.3rem; font-style: italic; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-left: 8px solid var(--azul-med);
-        }
-        .acerca-de-text {
-            color: #555; font-size: 1.15rem; line-height: 1.8; text-align: justify;
-            background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            background: var(--blanco);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            z-index: 2000;
         }
 
-        /* WHATSAPP Y FOOTER */
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-brand img {
+            height: 90px; 
+            margin-right: 20px;
+        }
+
+        .nav-brand span {
+            font-weight: 600;
+            color: var(--azul-med);
+            font-size: 1.8rem; 
+            letter-spacing: 0.8px;
+        }
+
+        .menu-links a {
+            margin: 0 20px; 
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            font-size: 1.1rem; 
+            transition: color 0.3s;
+        }
+
+        .menu-links a:hover {
+            color: var(--azul-med);
+        }
+
+        /* TÍTULO DE LA PÁGINA DE PRODUCTOS */
+        .page-title {
+            text-align: center;
+            padding: 60px 20px 20px;
+            color: var(--azul-oscuro);
+        }
+
+        .page-title h2 {
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .page-title p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* CATÁLOGO */
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            padding: 40px 5% 80px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 18px; 
+            padding: 35px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .producto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+            border-color: var(--azul-med);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 240px; 
+            object-fit: contain;
+            margin-bottom: 25px;
+            background-color: #fff;
+        }
+
+        .producto h3 { color: var(--azul-oscuro); font-size: 20px; margin: 15px 0 12px; font-weight: 600; }
+        .producto p { color: #777; font-size: 15px; margin-bottom: 30px; min-height: 50px; line-height: 1.6; }
+
+        /* BOTONES */
+        .btn-comprar {
+            display: inline-block;
+            background-color: var(--azul-med);
+            color: white;
+            padding: 16px 35px;
+            text-decoration: none;
+            border-radius: 10px; 
+            font-weight: 600;
+            font-size: 17px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--azul-med);
+        }
+
+        .btn-comprar:hover {
+            background-color: var(--azul-hover); 
+            border-color: var(--azul-hover);
+            transform: scale(1.04);
+        }
+
+        /* BOTÓN FLOTANTE */
         .whatsapp-float {
-            position: fixed; width: 70px; height: 70px; bottom: 45px; right: 45px; background-color: #25d366; color: #FFF;
-            border-radius: 50px; text-align: center; font-size: 38px; box-shadow: 3px 5px 18px rgba(0,0,0,0.35); z-index: 3000;
-            display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s;
+            position: fixed;
+            width: 70px; 
+            height: 70px;
+            bottom: 45px;
+            right: 45px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 38px;
+            box-shadow: 3px 5px 18px rgba(0,0,0,0.35);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1) translateY(-8px); }
-        
-        footer { background-color: var(--azul-oscuro); color: white; padding: 80px 5% 40px; margin-top: 80px; }
+        .whatsapp-float:hover { 
+            transform: scale(1.1) translateY(-8px); 
+            box-shadow: 3px 10px 25px rgba(0,0,0,0.45);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--azul-oscuro);
+            color: white;
+            padding: 80px 5% 40px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .nav-brand img { height: 75px; } 
+            .nav-brand span { font-size: 1.5rem; }
+            .page-title h2 { font-size: 2.4rem; }
+        }
 
         @media (max-width: 768px) {
             .menu-links { display: none; } 
             .nav-brand img { height: 65px; margin-right: 15px;} 
             .nav-brand span { font-size: 1.3rem; }
+            nav { padding: 15px 5%; }
+            .page-title h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -76,21 +202,149 @@
         </a>
         <div class="menu-links">
             <a href="index.html">Inicio</a>
-            <a href="nosotros.html" style="color: var(--azul-med); font-weight: 600;">Nosotros</a>
-            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="productos.html" style="color: var(--azul-med); font-weight: 600;">Productos</a>
             <a href="#contacto">Contacto</a>
         </div>
     </nav>
 
-    <div class="acerca-de">
-        <h2>Nuestra Historia</h2>
-        
-        <div class="acerca-de-quote">
-            "... Con más de 20 años en el negocio somos una de las empresas líder en la producción de repuestos dentales ..."
+    <div class="page-title">
+        <h2>Catálogo de Repuestos</h2>
+        <p>Encuentra las piezas exactas para el mantenimiento de tu unidad dental.</p>
+    </div>
+
+    <div id="catalogo" class="catalogo">
+        <div class="producto">
+            <img src="soporteblanco.jpg" alt="Soporte Solo">
+            <h3>Soporte Solo</h3>
+            <p>Soporte universal para instrumentos de unidad dental.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Soporte%20Solo" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
-        
-        <div class="acerca-de-text">
-            Somos una empresa que se dedica al diseño, fabricación, comercialización y servicio post-venta de accesorios y partes para la elaboración de equipos dentales, camas clínicas, sillones ginecológicos y equipo médico en general. La investigación y desarrollo conjuntamente con el feedback de nuestros clientes y el uso adecuado de recursos nos están acercando cada vez más a liderar nuestro mercado y ser una de las empresas emprendedoras más grandes del Perú que buscan desarrollar la industria nacional.
+        <div class="producto">
+            <img src="valvulas.jpg" alt="Soporte Automático">
+            <h3>Soporte Automático</h3>
+            <p>Válvula automática de precisión para control de fluidos.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Soporte%20Automático" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="retractoras.jpg" alt="Retractora">
+            <h3>Retractora</h3>
+            <p>Válvula retractora para sistema de agua de piezas de mano.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Retractora" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+
+        <div class="producto">
+            <img src="aros.jpg" alt="Aros en 4 medidas">
+            <h3>Aros en 4 medidas</h3>
+            <p>Set de aros de sellado para diversas conexiones dentales.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20los%20Aros%20en%204%20medidas" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="filtrodesuccion.jpg" alt="Filtro de Succión">
+            <h3>Filtro de Succión</h3>
+            <p>Filtro de alta eficiencia para protección del sistema.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Filtro%20de%20Succión" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="canastilla.jpg" alt="Canastilla para Salivadera">
+            <h3>Canastilla para Salivadera</h3>
+            <p>Filtro canastilla para recolección de sólidos.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Canastilla%20para%20Salivadera" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+
+        <div class="producto">
+            <img src="puntadesuccionconchupon.jpg" alt="Punta de Succión con Chupón">
+            <h3>Punta de Succión con Chupón</h3>
+            <p>Terminal de succión flexible de alta durabilidad.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Punta%20de%20Succión%20con%20Chupón" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="valvuladesuccion.jpg" alt="Válvula de Succión">
+            <h3>Válvula de Succión</h3>
+            <p>Regulador neumático para el sistema de aspiración.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Válvula%20de%20Succión" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="terminalborden.jpg" alt="Terminal Borden">
+            <h3>Terminal Borden</h3>
+            <p>Conector estándar de 2 entradas para alta velocidad.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Terminal%20Borden" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+
+        <div class="producto">
+            <img src="miple.jpg" alt="Miple">
+            <h3>Miple</h3>
+            <p>Unión metálica para mangueras de aire y agua.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Miple" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="holders.jpg" alt="Soporte Blanco">
+            <h3>Soporte Blanco</h3>
+            <p>Soporte de repuesto para módulo principal.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Soporte%20Blanco" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="pedales.jpg" alt="Pedales">
+            <h3>Pedales</h3>
+            <p>Control neumático de piso para unidades dentales.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesan%20los%20Pedales" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+
+        <div class="producto">
+            <img src="tapadebotella.jpg" alt="Tapa de Botella">
+            <h3>Tapa de Botella</h3>
+            <p>Tapa de alta resistencia para sistema Flush.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Tapa%20de%20Botella" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="pedalconmanguera.jpg" alt="Pedal con Manguera">
+            <h3>Pedal con Manguera</h3>
+            <p>Kit completo de pedal y manguera de conexión.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Pedal%20con%20Manguera" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="cajaauxiliar.jpg" alt="Caja Auxiliar de Control">
+            <h3>Caja Auxiliar de Control</h3>
+            <p>Módulo de control de conexiones para unidad.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Caja%20Auxiliar%20de%20Control" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+
+        <div class="producto">
+            <img src="empaquetaduratapadebotella.jpg" alt="Empaquetadura para Tapa de Botella">
+            <h3>Empaquetadura para Tapa de Botella</h3>
+            <p>Sello hermético de repuesto para botellas dentales.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Empaquetadura" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="jeringatriple.jpg" alt="Jeringa Triple">
+            <h3>Jeringa Triple</h3>
+            <p>Instrumento de aire/agua con puntas intercambiables.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20Jeringa%20Triple" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="pedalmultifuncion.jpg" alt="Pedal Multifunción">
+            <h3>Pedal Multifunción</h3>
+            <p>Control ergonómico avanzado para el sillón dental.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Pedal%20Multifunción" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+
+        <div class="producto">
+            <img src="kitdesuccion.jpg" alt="Kit de Succión">
+            <h3>Kit de Succión</h3>
+            <p>Mangueras y adaptadores para sistema de vacío.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Kit%20de%20Succión" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="teyuniondeplastico.jpg" alt="T y Unión de Plástico">
+            <h3>T y Unión de Plástico</h3>
+            <p>Conectores rápidos para distribución interna.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20la%20T%20y%20Unión%20de%20Plástico" target="_blank" class="btn-comprar">Cotizar Precio</a>
+        </div>
+        <div class="producto">
+            <img src="desaguerecto.jpg" alt="Desagüe Recto">
+            <h3>Desagüe Recto</h3>
+            <p>Tubo conector para sistema de drenaje.</p>
+            <a href="https://wa.me/51966303747?text=Hola,%20me%20interesa%20el%20Desagüe%20Recto" target="_blank" class="btn-comprar">Cotizar Precio</a>
         </div>
     </div>
 
@@ -102,6 +356,7 @@
                 <p style="font-size: 17px; margin: 15px 0;">📍 Calle Cailloma 455 - Centro de Lima, Perú</p>
                 <p style="font-size: 16px; opacity: 0.85; margin-top: 30px;">Atención de Lunes a Sábado</p>
             </div>
+
             <div style="flex: 1; min-width: 320px; border-radius: 18px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.4); background: white;">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9538318881267!2d-77.0371696845258!3d-12.046755991466847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c9e5300001%3A0x6b2b7b5c5e8b1b1!2sCa.%20Cailloma%20455%2C%20Lima%2015001%2C%20Peru!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -116,5 +371,6 @@
             <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.476 2.016 7.787l-2.016 7.353 7.521-1.972c2.203 1.157 4.711 1.832 7.379 1.832 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.273c-2.356 0-4.564-0.627-6.476-1.722l-0.464-0.267-4.48 1.175 1.203-4.381-0.293-0.467c-1.192-1.899-1.888-4.144-1.888-6.551 0-7.32 5.952-13.273 13.273-13.273s13.273 5.953 13.273 13.273c0 7.321-5.952 13.273-13.273 13.273zM22.387 18.84c-0.349-0.176-2.071-1.021-2.392-1.139s-0.555-0.176-0.787 0.176c-0.232 0.352-0.893 1.139-1.096 1.373s-0.405 0.264-0.755 0.088c-0.349-0.176-1.475-0.544-2.811-1.736-1.037-0.925-1.739-2.067-1.944-2.42c-0.203-0.352-0.021-0.541 0.155-0.717 0.157-0.157 0.352-0.408 0.528-0.613s0.232-0.352 0.349-0.587c0.117-0.235 0.059-0.44-0.029-0.616s-0.787-1.896-1.077-2.592c-0.283-0.677-0.571-0.584-0.787-0.595-0.203-0.011-0.435-0.013-0.667-0.013s-0.608 0.088-0.925 0.437c-0.317 0.349-1.211 1.184-1.211 2.883s1.235 3.339 1.405 3.573c0.171 0.235 2.429 3.712 5.885 5.203 0.821 0.355 1.464 0.565 1.963 0.725 0.824 0.261 1.576 0.224 2.168 0.136 0.661-0.099 2.071-0.845 2.363-1.661s0.291-1.517 0.203-1.661c-0.088-0.141-0.323-0.224-0.672-0.403z"/>
         </svg>
     </a>
+
 </body>
 </html>
